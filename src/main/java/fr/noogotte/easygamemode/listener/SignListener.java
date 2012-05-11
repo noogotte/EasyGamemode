@@ -1,4 +1,4 @@
-package fr.noogotte.easygamemode;
+package fr.noogotte.easygamemode.listener;
 
 import org.bukkit.ChatColor;
 import org.bukkit.block.Sign;
@@ -9,6 +9,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.block.SignChangeEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
+
+import fr.noogotte.easygamemode.EasyGamemode;
+import fr.noogotte.easygamemode.commands.Commands;
 
 public class SignListener implements Listener {
     public EasyGamemode plugin;
@@ -27,14 +30,14 @@ public class SignListener implements Listener {
 
         if (!player.hasPermission("easyG.SignPlace")) {
             event.getBlock().breakNaturally();
-            player.sendMessage(plugin.getPermissionMessage());
+            player.sendMessage(ChatColor.RED + "");
             return;
         }
 
         event.setLine(0, ChatColor.RED + "[EasyG]");
         event.setLine(1, ChatColor.GREEN + "Changement de");
         event.setLine(2, ChatColor.GREEN + "Gamemode");
-        player.sendMessage(ChatColor.BLUE + "Vous avez cr�� un panneau de changement de gamemode !");
+        player.sendMessage(ChatColor.BLUE + "Vous avez crée un panneau de changement de gamemode !");
     }
 
     @EventHandler(priority = EventPriority.HIGH)
@@ -57,10 +60,10 @@ public class SignListener implements Listener {
         Player player = event.getPlayer();
 
         if (!player.hasPermission("easyG.SignUse")) {
-            player.sendMessage(plugin.getPermissionMessage());
+            player.sendMessage(ChatColor.RED + "");
             return;
         }
 
-        plugin.toggleGameMode(player);
+        Commands.toggleGameMode(player);
     }
 }

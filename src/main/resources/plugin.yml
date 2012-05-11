@@ -2,13 +2,17 @@ name: EasyGamemode
 author: noogotte
 version: 1.7
 
-main: fr.noogotte.EasyGamemode.EasyGamemode
+main: fr.noogotte.easygamemode.EasyGamemode
  
 commands:
-    easy-gamemode:
-        description: "Change votre gamemode."
-        usage: "/<command> c[reative] | s[urvival] | t[oggle]"
-        aliases: ["eg", "gm"]
+    easygamemode:
+        description: "Commande principale"
+        usage: "gm"
+    "easygamemode gamemode":
+        description: "Change votre gamemode"
+        usage: ""
+        permission: "easyG.cmd.gamemode"
+        aliases: ["gm", "eg"]
         
 permissions:
     easyG.cmd.*:
@@ -16,11 +20,11 @@ permissions:
         children:
             easyG.SignPlace: true
             easyG.SignUse: true
-            easyG.cmd.other: true
-            easyG.cmd.me: true
-    easyG.cmd.me:
+            easyG.cmd.gamemode: true
+            easyG.cmd.fly: true
+    easyG.cmd.gamemode:
         default: op
-    easyG.cmd.other:
+    easyG.cmd.fly:
         default: op
     easyG.SignPlace:
         default: op
