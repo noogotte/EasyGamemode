@@ -1,4 +1,4 @@
-package main.java.fr.noogotte.easygamemode;
+package fr.noogotte.easygamemode;
 
 import org.bukkit.ChatColor;
 import org.bukkit.block.Sign;
@@ -34,7 +34,7 @@ public class SignListener implements Listener {
         event.setLine(0, ChatColor.RED + "[EasyG]");
         event.setLine(1, ChatColor.GREEN + "Changement de");
         event.setLine(2, ChatColor.GREEN + "Gamemode");
-        player.sendMessage(ChatColor.BLUE + "Vous avez créé un panneau de changement de gamemode !");
+        player.sendMessage(ChatColor.BLUE + "Vous avez crï¿½ï¿½ un panneau de changement de gamemode !");
     }
 
     @EventHandler(priority = EventPriority.HIGH)

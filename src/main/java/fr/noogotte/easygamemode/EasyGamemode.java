@@ -1,4 +1,4 @@
-package main.java.fr.noogotte.easygamemode;
+package fr.noogotte.easygamemode;
 
 import javax.xml.ws.Response;
 
@@ -53,7 +53,7 @@ public class EasyGamemode extends JavaPlugin {
                     ChatColor.DARK_AQUA + target.getName() +
                     ChatColor.AQUA + " est maintenant en " +
                     ChatColor.GOLD + "CREATIVE");
-            responsible.sendMessage(ChatColor.GOLD + "Vous avez changé le gamemode de " +
+            responsible.sendMessage(ChatColor.GOLD + "Vous avez changï¿½ le gamemode de " +
             		ChatColor.DARK_AQUA + target.getName());
         }
     }
